@@ -155,6 +155,58 @@
     margin-bottom: 1rem;
   }
   .hero-body strong { color: var(--white); font-weight: 500; }
+  .status-pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem 0.5rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(76,217,123,0.08);
+    border: 1px solid rgba(76,217,123,0.25);
+    overflow: hidden;
+  }
+  .status-pill::before {
+    content: '';
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(circle at 30% 50%, rgba(76,217,123,0.18), transparent 60%);
+    animation: statusGlow 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .status-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4cd97b;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .status-dot::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1.5px solid #4cd97b;
+    animation: statusPing 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .status-text {
+    position: relative;
+    z-index: 1;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--white);
+  }
+  @keyframes statusPing {
+    0% { transform: scale(0.6); opacity: 0.8; }
+    75%, 100% { transform: scale(1.8); opacity: 0; }
+  }
+  @keyframes statusGlow {
+    0%, 100% { transform: translateX(0) scale(1); opacity: 0.7; }
+    50% { transform: translateX(10%) scale(1.15); opacity: 1; }
+  }
   .hero-links {
     display: flex;
     align-items: center;
@@ -850,8 +902,11 @@
     <div class="hero" style="display:grid; grid-template-columns:1fr auto; gap:4rem; align-items:start;">
       <div>
       <h1 class="hero-headline">👋 Hi, ik ben Merel Grim. <span class="highlight">Senior UX/ Product designer</span> met 10+ jaar ervaring</h1>
-      <p class="hero-body">Producten gerealiseerd voor web, app en TV, B2B en B2C. Gespecialiseerd in het vertalen van complexe processen naar heldere, intuïtieve gebruikerservaringen die zowel gebruiksvriendelijk als visueel sterk zijn.</p>
-      <p class="hero-body">Momenteel op zoek naar een nieuwe functie.</p>
+      <p class="hero-body">Producten gerealiseerd voor web, app en TV, B2B en B2C. Gespecialiseerd in het vertalen van complexe processen naar heldere, intuïtieve gebruikerservaringen die zowel gebruiksvriendelijk als visueel sterk zijn. Veel oog voor detail, gebruiker en proces.</p>
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span class="status-text">Momenteel op zoek naar een nieuwe functie</span>
+      </div>
       <div class="hero-links">
         <a href="#" onclick="showHome('projecten'); return false;" class="btn-primary">Bekijk projecten</a>
         <a href="https://www.linkedin.com/in/merelgrim/" target="_blank" class="btn-ghost">
@@ -1097,10 +1152,6 @@
         <button class="case-nav-btn" onclick="openCase('jaarbeurs')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
           <span><span class="case-nav-label">Vorig project</span>Jaarbeurs</span>
-        </button>
-        <button class="case-nav-btn next" onclick="openCase('surepay')">
-          <span><span class="case-nav-label">Volgend project</span>SurePay</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </button>
       </div>
     </div>
