@@ -901,7 +901,7 @@
   <div class="container">
     <div class="hero" style="display:grid; grid-template-columns:1fr auto; gap:4rem; align-items:start;">
       <div>
-      <h1 class="hero-headline">👋 Hi, ik ben Merel Grim. <span class="highlight">Senior UX/ Product designer</span> met 10+ jaar ervaring</h1>
+      <h1 class="hero-headline">👋 Hi, ik ben Merel Grim. <span class="highlight">Senior UX/UI designer</span> met 10+ jaar ervaring</h1>
       <p class="hero-body">Producten gerealiseerd voor web, app en TV, B2B en B2C. Gespecialiseerd in het vertalen van complexe processen naar heldere, intuïtieve gebruikerservaringen die zowel gebruiksvriendelijk als visueel sterk zijn. Veel oog voor detail, gebruiker en proces.</p>
       <div class="status-pill">
         <span class="status-dot"></span>
@@ -1004,7 +1004,7 @@
             <div>
               <div class="proj-num">05</div>
               <div class="proj-name">SurePay</div>
-              <p class="proj-desc">IBAN-name check voor veilig betalen</p>
+              <p class="proj-desc">Portal en developer portal voor de IBAN-Naam Check</p>
             </div>
             <svg class="proj-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </div>
@@ -1163,26 +1163,35 @@
         Terug naar projecten
       </button>
       <div class="case-eyebrow">Case — Lightbase</div>
-      <h1 class="case-title">SurePay — IBAN-Naam Check</h1>
-      <p class="case-intro">De gebruikersinterface voor de SurePay IBAN-Naam Check: een dienst die fraude voorkomt door bankrekeningnummer en naam van de ontvanger te verifiëren. En een developer portal voor technische integratie.</p>
+      <h1 class="case-title">SurePay</h1>
+      <p class="case-intro">Twee opeenvolgende projecten voor SurePay, het Nederlandse fintechbedrijf achter de IBAN-Naam Check: een portal waarmee organisaties de IBAN-Naam Check zelf kunnen uitvoeren, en een developer portal waarmee technische partijen aansluiten op de API's van SurePay.</p>
       <div class="case-meta">
         <div class="case-meta-item"><div class="case-meta-label">Opdrachtgever</div><div class="case-meta-value">SurePay</div></div>
-        <div class="case-meta-item"><div class="case-meta-label">Rol</div><div class="case-meta-value">UX/UI Designer</div></div>
+        <div class="case-meta-item"><div class="case-meta-label">Rol</div><div class="case-meta-value">Senior UX/UI Designer</div></div>
         <div class="case-meta-item"><div class="case-meta-label">Platform</div><div class="case-meta-value">Web (B2B)</div></div>
       </div>
       <div class="case-image" style="background: linear-gradient(135deg, #1a2a4a 0%, #1e3d6e 100%);">[ Schermafbeeldingen toevoegen ]</div>
       <div class="case-section">
-        <h3>Uitdaging</h3>
-        <p>SurePay bedient zowel eindgebruikers als developers. Beide doelgroepen hebben totaal andere behoeften en technische achtergronden. Twee producten, één consistente merkervaring.</p>
+        <h3>IBAN-Naam Check portal</h3>
+        <p>SurePay bouwde eerder al API's waarmee bankapps rekeningnummer en naam van de begunstigde controleren, als bescherming tegen tikfouten en fraude zoals spookfacturen. SurePay wilde deze techniek breder aanbieden aan andere organisaties, zoals gemeenten en verzekeraars, en had daarvoor een portal nodig. De uitdaging: de data achter de API visueel en begrijpelijk maken, inclusief het kunnen zoeken en matchen van bedrijven op KvK- en vestigingsnummer, niet alleen voor Nederlandse data maar ook voor andere landen waar SurePay actief is.</p>
+        <p>Ik ging als UX-designer aan de slag met het ontwerp, na een design sprint waarin de belangrijkste wensen en scenario's helder werden. Na de design fase werkten developers van SurePay en Lightbase nauw samen: zij pasten de API-endpoints aan zodat wij ermee verder konden, en met testdata zijn alle scenario's doorlopen en gevalideerd.</p>
+        <p>Omdat het om financiële data gaat, stond veiligheid voorop. In de testomgeving werd uitsluitend met fictieve data gewerkt, nooit met echte gebruikersgegevens. Daarnaast is een streng Content Security Policy-beleid toegepast om aanvallen zoals cross-site scripting en clickjacking te voorkomen.</p>
       </div>
       <div class="case-section">
-        <h3>Aanpak</h3>
-        <p>Voor het consumentenportal lag de focus op vertrouwen en eenvoud. Voor het developerportal ontwierp ik een documentatie-first omgeving met heldere API-referenties, codevoorbeelden en interactieve sandboxes.</p>
+        <h3>Developer portal</h3>
+        <p>De samenwerking aan de IBAN-Naam Check portal beviel goed, en dat was voor SurePay reden om Lightbase ook te vragen voor een developer portal: een centrale plek met alle technische informatie die partijen nodig hebben om aan te sluiten op de producten van SurePay.</p>
+        <p>Het project startte met een inventarisatie van wensen bij de belangrijkste stakeholders, aangevuld met inspiratie uit developer portals van andere fintechs. Op basis daarvan ging ik als UX-designer aan de slag met het ontwerp, in een iteratief traject waarin stakeholders tijdens design-demo's feedback gaven en SurePay ook feedback van eindgebruikers kon ophalen.</p>
+        <p>Centraal in de portal staat de documentatie van de verschillende API's: een introductie, technische details per endpoint, codevoorbeelden, uitleg over authenticatie en een quick-setup handleiding. Een uitgebreide, doorzoekbare FAQ-sectie helpt developers verder als ze vastlopen. Voor het aanvragen van API keys voor zowel de sandbox- als productieomgeving is een eigen formulier ontworpen, en een statuspagina houdt aansluitende partijen op de hoogte van de actuele status van de API's.</p>
+        <p>Omdat de content, met name de FAQ, voortdurend wordt uitgebreid en de nodige technische details bevat zoals codevoorbeelden, viel een standaard headless CMS af. In plaats daarvan is gekozen voor MDX: een documentatiestructuur op basis van Markdown waarmee codevoorbeelden overzichtelijk getoond worden en herbruikbare content-blokken gedefinieerd kunnen worden. Hiervoor zijn verschillende paginatemplates uitgewerkt, zodat contentbeheerders zelf eenvoudig content kunnen toevoegen of aanpassen, waarna deze automatisch gecontroleerd en gepubliceerd wordt.</p>
+      </div>
+      <div class="case-section">
+        <h3>Resultaat</h3>
+        <p>Beide portals zijn succesvol gelanceerd en worden nog dagelijks gebruikt. Steeds meer financiële instellingen in binnen- en buitenland hebben producten van SurePay geïntegreerd, en inmiddels bieden vrijwel alle Nederlandse banken de IBAN-Naam Check aan in hun bankieren-app.</p>
       </div>
       <div class="case-section">
         <h3>Vaardigheden</h3>
         <div class="case-tags">
-          <span class="tag">B2B UX</span><span class="tag">Developer Experience</span><span class="tag">UI Design</span><span class="tag">Figma</span><span class="tag">Design Systems</span>
+          <span class="tag">B2B UX</span><span class="tag">Developer Experience</span><span class="tag">Component Library</span><span class="tag">UI Design</span><span class="tag">Figma</span><span class="tag">Design Systems</span>
         </div>
       </div>
     
