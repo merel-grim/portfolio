@@ -916,6 +916,68 @@
   }
   .skel-card { display: flex; flex-direction: column; gap: 0.75rem; }
 
+  /* CV BLOCK — titel links, smaller blok met items rechts */
+  .cv-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    margin-top: 4.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+  }
+  .cv-subhead {
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    flex: 0 0 auto;
+    width: 190px;
+    white-space: nowrap;
+    padding-top: 0.1rem;
+  }
+  .cv-list {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .cv-row {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cv-row:first-child { padding-top: 0; }
+  .cv-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .cv-row-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    flex-wrap: wrap;
+  }
+  .cv-row-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .cv-row-role {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+  }
+  .cv-row-meta { font-size: 0.88rem; color: var(--muted); }
+  .cv-row-company { font-weight: 500; color: var(--white); }
+  .cv-row-place { font-weight: 500; color: var(--muted); }
+  .cv-row-period {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--highlight);
+    white-space: nowrap;
+  }
+  @media (max-width: 768px) {
+    .cv-block { flex-direction: column; gap: 1.25rem; }
+    .cv-subhead { width: auto; }
+  }
+
 </style>
 </head>
 <body>
@@ -1020,15 +1082,56 @@
     <div class="section" id="over">
       <p class="section-label">Over mij</p>
       <div class="about-text">
-        <p>Sinds eind 2015 werk ik in verschillend klinkende rollen die op hetzelfde neerkomen: UX/UI designer. Begonnen bij een serious gaming bedrijf, even rondgekeken in Hilversum, en de laatste 5,5 jaar bij <a href="https://www.lightbase.nl/" target="_blank">Lightbase</a> in Utrecht. Als enige designer droeg ik daar end-to-end ownership: van gebruikersonderzoek tot overdracht aan development, en alles daartussenin en de doorontwikkeling daarna.</p>
+        <p>Sinds eind 2015 werk ik in verschillend klinkende rollen die op hetzelfde neerkomen: UX/UI designer. De laatste 5,5 jaar bij <a href="https://www.lightbase.nl/" target="_blank">Lightbase</a> in Utrecht. Als enige designer droeg ik daar end-to-end ownership: van gebruikersonderzoek tot overdracht aan development, en alles daartussenin en de doorontwikkeling daarna.</p>
         <p>Buiten kantooruren kun je mij vinden op het hockeyveld en bezoek ik graag een van de Utrechtse filmhuizen. Daarnaast hou ik van reizen, lezen en doe ik maandelijks, met een vast fanatiek team, mee aan een pubquiz.</p>
-        <p>Voor het volledige CV en contact kun je mijn <a href="https://www.linkedin.com/in/merelgrim/" target="_blank">LinkedIn</a> bekijken.</p>
       </div>
       <div class="about-grid">
         <div class="about-stat"><div class="stat-label">Laatst</div><div class="stat-value">Senior Digital Designer @ Lightbase</div></div>
         <div class="about-stat"><div class="stat-label">Gevestigd in</div><div class="stat-value">Utrecht, Nederland</div></div>
         <div class="about-stat"><div class="stat-label">Specialisme</div><div class="stat-value">UX/UI & Visual Design, WCAG toegankelijkheid, UX research, prototyping en user testing</div></div>
         <div class="about-stat"><div class="stat-label">Certificaten</div><div class="stat-value">UX Analytics, Nielsen Norman Group · Google Analytics · BHV</div></div>
+      </div>
+
+      <div class="cv-block">
+        <h3 class="cv-subhead">Werkervaring</h3>
+        <div class="cv-list">
+          <div class="cv-row">
+            <div class="cv-row-main">
+              <div class="cv-row-title">
+                <span class="cv-row-role">Sr. Digital Designer</span>
+                <span class="cv-row-meta"><span class="cv-row-company">Lightbase</span> · <span class="cv-row-place">Utrecht</span></span>
+              </div>
+              <span class="cv-row-period">Feb 2021 — Jul 2026</span>
+            </div>
+          </div>
+          <div class="cv-row">
+            <div class="cv-row-main">
+              <div class="cv-row-title">
+                <span class="cv-row-role">UX/UI Designer</span>
+                <span class="cv-row-meta"><span class="cv-row-company">BNNVARA</span> · <span class="cv-row-place">Hilversum</span></span>
+              </div>
+              <span class="cv-row-period">Feb 2019 — Jan 2021</span>
+            </div>
+          </div>
+          <div class="cv-row">
+            <div class="cv-row-main">
+              <div class="cv-row-title">
+                <span class="cv-row-role">Visual/UX Designer</span>
+                <span class="cv-row-meta"><span class="cv-row-company">Stoneroos</span> · <span class="cv-row-place">Hilversum</span></span>
+              </div>
+              <span class="cv-row-period">Mrt 2017 — Dec 2018</span>
+            </div>
+          </div>
+          <div class="cv-row">
+            <div class="cv-row-main">
+              <div class="cv-row-title">
+                <span class="cv-row-role">Jr. Visual designer</span>
+                <span class="cv-row-meta"><span class="cv-row-company">QLVR Company</span> · <span class="cv-row-place">Utrecht</span></span>
+              </div>
+              <span class="cv-row-period">Okt 2015 — Feb 2017</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
